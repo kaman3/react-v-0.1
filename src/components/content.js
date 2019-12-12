@@ -1,5 +1,6 @@
 import React from "react";
 import swal from 'sweetalert';
+import Description from "./description";
 
 class Content extends React.Component{
 
@@ -32,7 +33,6 @@ class Content extends React.Component{
             swal({
                title:"Ошибка",
                text:"Промокод должен содержать 11 цифр",
-               icon:"исправить",
                confirmButtonColor:"#b7c8d2"
             });
 
@@ -44,10 +44,7 @@ class Content extends React.Component{
     render(){
         return(
             <div className = "row">
-                <div className = "col-lg-7">
-                     левая часть
-                </div>
-                <div className = "col-lg-5">
+                <div className = "col-md-5 order-sm-7">
                      <div className = "registrationCupon">
                           <h1>Регистрация купона</h1>
                      </div>
@@ -61,7 +58,11 @@ class Content extends React.Component{
                                 <button type="submit" className="btn btn-primary btn-askent" onClick = {this.getForm}>Зарегистрировать</button>
                             </div>
                           </form>
+                          <p>Нажимая кнопку «Зарегистрировать», вы соглашаетесь с условиями проведения акции.</p>
                      </div>
+                </div>
+                <div className = "order-sm-5 col-md-7">
+                     <Description/>
                 </div>
             </div>
         );
