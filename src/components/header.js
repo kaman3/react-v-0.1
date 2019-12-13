@@ -1,4 +1,5 @@
 import React from "react";
+import Menu from  "./menu";
 
 class Header extends React.Component{
     render(){
@@ -7,6 +8,7 @@ class Header extends React.Component{
                 <div className = "col-lg-12-auto banner">
                     <img src = "images/banner-header.jpg"/>
                 </div>
+                <Menu/>
             </div>
         );
     }
